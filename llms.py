@@ -1,5 +1,4 @@
-# from langchain.llms import OpenAI azure or openai
-from langchain_community.llms.openai import AzureOpenAI
+from langchain_openai import AzureOpenAI
 import os
 from dotenv import load_dotenv
 
@@ -10,17 +9,11 @@ llm = AzureOpenAI(
     api_key=os.getenv("AOAI_API_KEY"),
     api_version=os.getenv("AOAI_API_VERSION"),
     openai_api_type="azure",
+    # gpt35_turbo以前のモデル（text completion）を選択
     azure_deployment=os.getenv("AOAI_DEPLOYMENT"),
+    temperature=0.9
 )
 
 output = llm.predict("日本の総理大臣は誰ですか？")
 
 print(output)
-
-# 元のコード
-# from langchain.llms import OpenAI
-
-# llm = OpenAI(temperature=0.9)
-# output = llm.predict("日本の総理大臣は誰ですか？")
-
-# print(output)
