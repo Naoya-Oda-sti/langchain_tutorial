@@ -14,6 +14,6 @@ llm = AzureOpenAI(
     temperature=0.9
 )
 
-output = llm.predict("日本の総理大臣は誰ですか？")
+output = llm.predict("あなたの名前を教えてください")
 
 print(output)

@@ -11,6 +11,6 @@ chat = AzureChatOpenAI(
     azure_deployment=os.getenv("AOAI_DEPLOYMENT"),
     temperature=0
 )
-output = chat.predict("私の名前は何でしょうか？") 
+output = chat.predict("あなたの名前を教えてください") 
 
 print(output)
