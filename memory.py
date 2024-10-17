@@ -14,7 +14,7 @@ llm = AzureOpenAI(
 
 conversation = ConversationChain(llm=llm, verbose=True)
 
-output = conversation.run("私は日本人です。何を聞いても日本語で答えてください。")
-# output = conversation.run("Who is the prime minister of Japan?")
+output = conversation.run("私の妻の名前は花子です")
+output = conversation.run("私の妻の名前は何でしょうか？")
 
 print(output)

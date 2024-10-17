@@ -1,8 +1,7 @@
 # 【Waring!】 chainは非推奨になり、代替機能も現状見つからないため後回し
 from langchain_openai import AzureChatOpenAI
 from langchain.prompts import PromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-# from langchain.chains import LLMChain
+from langchain.chains import RunnableSequence 
 # LLMChainは非推奨になった
 import os
 
@@ -14,8 +13,11 @@ llm = AzureChatOpenAI(
     azure_deployment=os.getenv("AOAI_DEPLOYMENT"),
     temperature=0
 )
+
 template = PromptTemplate.from_template("{keyword}を解説するQiita記事のタイトル案は?")
 
-chain = llm | template | StrOutputParser()
+# LLMChainの代わりにRunnableSequenceを使用
+chain = RunnableSequence([template, llm])
 
-chain.invoke({"keyword":"kaggle"})
+result = chain.invoke({"keyword": "kaggle"})
+print(result)

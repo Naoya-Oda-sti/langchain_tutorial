@@ -1,9 +1,10 @@
-# エラーが発生してるので修正をお願いします
+# gpt3.5でやること
 from langchain.agents import AgentType, initialize_agent, load_tools
 from langchain_community.llms.openai import AzureOpenAI
-from dotenv import load_dotenv
 import os
 
+# 環境変数の初期化
+from dotenv import load_dotenv
 load_dotenv()
 
 llm = AzureOpenAI(
@@ -11,14 +12,13 @@ llm = AzureOpenAI(
     api_key=os.getenv("AOAI_API_KEY"),
     api_version=os.getenv("AOAI_API_VERSION"),
     openai_api_type="azure",
-    azure_deployment=os.getenv("AOAI_35_DEPLOYMENT"),
+    azure_deployment=os.getenv("AOAI_DEPLOYMENT"),
 )
+
 tools = load_tools(["serpapi", "llm-math"], llm=llm)
 
 agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
 
-try:
-    output = agent.run("今日の富山県の最高気温は摂氏何度ですか？またその値を2乗してください。")
-    print(output)
-except ValueError as e:
-    print(f"エラーが発生しました: {e}")
+output = agent.run("今日の新宿区の最高気温の摂氏温度の平方根はいくつ？")
+
+print(output)
