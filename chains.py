@@ -1,11 +1,21 @@
+# 【Waring!】 chainは非推奨になり、代替機能も現状見つからないため後回し
 from langchain_openai import AzureChatOpenAI
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain_core.output_parsers import StrOutputParser
+# from langchain.chains import LLMChain
+# LLMChainは非推奨になった
+import os
 
-chat = AzureChatOpenAI(temperature=0)
+llm = AzureChatOpenAI(
+    azure_endpoint=os.getenv("AOAI_ENDPOINT"),
+    api_key=os.getenv("AOAI_API_KEY"),
+    api_version=os.getenv("AOAI_API_VERSION"),
+    openai_api_type="azure",
+    azure_deployment=os.getenv("AOAI_DEPLOYMENT"),
+    temperature=0
+)
 template = PromptTemplate.from_template("{keyword}を解説するQiita記事のタイトル案は?")
 
-chain = LLMChain(llm=chat, prompt=template)
-output = chain.run("LangChain")
+chain = llm | template | StrOutputParser()
 
-print(output)
+chain.invoke({"keyword":"kaggle"})
