@@ -11,7 +11,11 @@
   - venv を作成・起動
     ```
     cd [project dir]
+    ```
+    ```
     python3 -m venv venv
+    ```
+    ```
     .\venv\Scripts\activate
     ```
   - 仮想環境に必要なライブラリをインストール
