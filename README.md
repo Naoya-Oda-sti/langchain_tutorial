@@ -31,6 +31,7 @@
     - AOAI_API_VERSION:[コチラ](https://learn.microsoft.com/ja-jp/azure/ai-services/openai/api-version-deprecation)から確認
     - AOAI_API_KEY:Azure 上で確認
     - AOAI_CHAT_MODEL_NAME:Azure 上で設定したデプロイ名を登録
+    - 詳細はサンプル（.env.sample）を参照
 
 - 各ファイルの説明
   - XXX.py：XXX 機能のサンプルコード．hogehoge ができる．
