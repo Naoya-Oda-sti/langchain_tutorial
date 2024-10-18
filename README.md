@@ -4,10 +4,10 @@
 
 - 事前準備
 
-  - ローカル環境に Python をインストール
+  - ローカル環境に python をインストール
     - [python 公式ページ](https://www.python.org/)にアクセス
     - Downloads にカーソルを合わせボタンを押下するとインストールされる
-      ![inst](src/pythoninst.png)
+      <img src="src/pythoninst.png" width="800">
     - 詳細な手順は[コチラ](https://sukkiri.jp/technologies/processors/python/python%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95windows%E7%B7%A8.html)
   - venv を作成・起動
     - プロジェクトディレクトリに移動
