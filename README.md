@@ -9,12 +9,15 @@
     - Downloads にカーソルを合わせボタンを押下するとインストールされる
     - 詳細な手順は[コチラ](https://sukkiri.jp/technologies/processors/python/python%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95windows%E7%B7%A8.html)
   - venv を作成・起動
+    - プロジェクトディレクトリに移動
     ```
     cd [project dir]
     ```
+    - 仮想環境を作成（名前は venv にしておく）
     ```
     python3 -m venv venv
     ```
+    - 仮想環境を起動
     ```
     .\venv\Scripts\activate
     ```
