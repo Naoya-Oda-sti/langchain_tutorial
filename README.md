@@ -37,10 +37,13 @@
   - my_agents.py：agent のサンプルコード．Tool（関数）の呼び出しができる．
   - my_chains.py：バージョン更新により使用不可
   - my_chat_models.py：チャットモデルのサンプルコード．デプロイの呼び出しを抽象化できる．
+  - my_docloader：pdf 読み込み機能のサンプルコード．質問文と関連度の高い PDF のページの index とその内容を表示することができる．
+  - my_embeddings:embedding を呼び出すためのサンプルコード．
   - my_memory.py：メモリー機能のサンプルコード．入力内容を記憶させることができる．
   - my_prompts.py：プロンプトテンプレートのサンプルコード．プロンプトのテンプレートを設定できる．
   - my_pydantic.py：langchain と pydantic を組み合わせたサンプルコード．出力を JSON 形式に指定できる．
   - my_streaming.py：streaming 機能のサンプルコード．回答を非同期的に出力可能．
+  - my_textsplit.py：テキスト分割機能のサンプルコード．別途デプロイを用意しなくても実行可能
 
 ## その他情報
 
