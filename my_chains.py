@@ -2,7 +2,6 @@
 from langchain_openai import AzureChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import RunnableSequence 
-# LLMChainは非推奨になった
 import os
 
 llm = AzureChatOpenAI(
