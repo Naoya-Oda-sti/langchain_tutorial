@@ -13,4 +13,5 @@ embeddings = AzureOpenAIEmbeddings(
 )
 query_result = embeddings.embed_query("ITエンジニアについて30文字で教えて。")
 
-print(query_result)
+print("ベクトル：",query_result)
+print("ベクトルの次元数：",len(query_result))

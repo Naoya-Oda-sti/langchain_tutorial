@@ -44,6 +44,7 @@
   - my_pydantic.py：langchain と pydantic を組み合わせたサンプルコード．出力を JSON 形式に指定できる．
   - my_streaming.py：streaming 機能のサンプルコード．回答を非同期的に出力可能．
   - my_textsplit.py：テキスト分割機能のサンプルコード．別途デプロイを用意しなくても実行可能
+  - my_vecidcreator.py：簡易的な RAG の実装方法．VectorstoreIndexCreator クラスを利用．
 
 ## その他情報
 
