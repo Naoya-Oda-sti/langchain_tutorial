@@ -34,7 +34,13 @@
     - 詳細はサンプル（.env.sample）を参照
 
 - 各ファイルの説明
-  - XXX.py：XXX 機能のサンプルコード．hogehoge ができる．
+  - my_agents.py：agent のサンプルコード．Tool（関数）の呼び出しができる．
+  - my_chains.py：現状使えない
+  - my_chat_models.py：チャットモデルのサンプルコード．デプロイの呼び出しを抽象化できる．
+  - my_memory.py：現状使えない
+  - my_prompts.py：プロンプトテンプレートのサンプルコード．プロンプトのテンプレートを設定できる．
+  - my_pydantic.py：https://qiita.com/sergicalsix/items/26c90813856093145df8#%E5%86%85%E5%AE%B9
+  - my_streaming.py：streaming 機能のサンプルコード．回答を非同期的に出力可能．
 
 ## その他情報
 

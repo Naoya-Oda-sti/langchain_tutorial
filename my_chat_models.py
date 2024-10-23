@@ -1,6 +1,11 @@
 # AzureOpenAIではなくAzureChatOpenAIを使う
 # https://stackoverflow.com/questions/78656632/the-completion-operation-does-not-work-with-the-specified-model-gpt-4
 from langchain_openai import AzureChatOpenAI
+from langchain.schema import (
+    AIMessage,
+    HumanMessage,
+    SystemMessage
+)
 import os
 
 llm = AzureChatOpenAI(
@@ -11,6 +16,10 @@ llm = AzureChatOpenAI(
     azure_deployment=os.getenv("AOAI_DEPLOYMENT"),
     temperature=0
 )
-output = llm.predict("あなたの名前を教えてください") 
 
-print(output)
+messages = [
+    SystemMessage(content="あなたは日本語を英語に翻訳するアシスタントです。"),
+    HumanMessage(content="「私はプログラミングが大好きです。」を日本語から英語に翻訳してください。")
+]
+response = llm.invoke(messages)
+print(response.content)
