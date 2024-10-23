@@ -15,6 +15,6 @@ llm = AzureOpenAI(
 conversation = ConversationChain(llm=llm, verbose=True)
 
 output = conversation.run("私の妻の名前は花子です")
-# output = conversation.run("私の妻の名前は何でしょうか？")
+output = conversation.run("私の妻の名前は何でしょうか？")
 
 print(output)
