@@ -1,4 +1,3 @@
-# gpt4oでは使えない
 from langchain import ConversationChain
 from langchain_community.llms.openai import AzureOpenAI
 import os

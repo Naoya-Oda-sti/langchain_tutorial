@@ -1,5 +1,3 @@
-# AzureOpenAIではなくAzureChatOpenAIを使う
-# https://stackoverflow.com/questions/78656632/the-completion-operation-does-not-work-with-the-specified-model-gpt-4
 from langchain_openai import AzureChatOpenAI
 from langchain.schema import (
     AIMessage,
